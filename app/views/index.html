@@ -5,6 +5,20 @@
   Project Groundtruth
 {% endblock %}
 
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        prototype
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a demo service created for the Flood Warning Expansion Hack
+      </span>
+    </p>
+  </div>
+{% endblock %}
+
+
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -14,8 +28,10 @@
         <span class="govuk-caption-xl">{{releaseVersion}}</span>
       </h1>{{releaseVersion | log }}
 
-      <p>Problem statement: How do we know if our high uncertainty warnings for hard to reach communities are accurate?</p>
+      <h2 class="govuk-heading-m">Problem statement</h2>
+      <p>How do we know if our high uncertainty warnings for hard to reach communities are accurate?</p>
 
+      <h2 class="govuk-heading-m">Solution</h2>
       <p>Solution: We ask local residents to provide feedback via an online form on observed impacts. This allows us to get a picture of what happens and how this relates to sensor behaviour and weather forecasts. This will allow us to refine our local flood warning offering based on actual on the ground observations.</p>
 
       <p>This prototype provides an example of how local residents and communitys could feedback local impacts of flooding.</p>
