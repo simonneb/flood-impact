@@ -1,0 +1,94 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What was impacted?
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        prototype
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a demo service created for the Flood Warning Expansion Hack
+      </span>
+    </p>
+  </div>
+  <a class="govuk-back-link" href="/inputdata_source">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">What was impacted?</h1>
+
+      <form class="form" action="/summary" method="post">
+
+        <h3 class="govuk-heading-m">Location selected</h3>
+
+        <p>Lorna Doone Farm, EX35 6NU</p>
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+              <h3 class="govuk-heading-m">Source of flooding</h3>
+            </legend>
+            <span id="citizenship-conditional-hint" class="govuk-hint">
+              Select all options that are relevant to you.
+            </span>
+            <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="citizenship-conditional" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional">
+                <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
+                  River
+                </label>
+              </div>
+              <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="contact-by-email">
+                    Which river? - be as accurate as possible
+                  </label>
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="text" spellcheck="false">
+                </div>
+              </div>
+              
+                  <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                      <label class="govuk-label govuk-checkboxes__label" for="waste">
+                        Coast
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                        Groundwater
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                        Surfacewater
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+
+
+            </div>
+          </fieldset>
+        </div>
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
