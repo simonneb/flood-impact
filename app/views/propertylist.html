@@ -15,7 +15,7 @@
       </span>
     </p>
   </div>
-  <a class="govuk-back-link" href="/reporttype">Back</a>
+  <a class="govuk-back-link" href="/property">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -28,14 +28,18 @@
   </legend>
 
   <div class="govuk-form-group">
-    <label class="govuk-label" for="address-postcode">
-      Postcode
-    </label>
-    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text">
+    <label class="govuk-label" for="sort">
+Select your address from the list below     </label>
+    <select class="govuk-select" id="sort" name="sort">
+      <option value="published">Badgworthy Cottage, EX35 6NU</option>
+      <option value="updated" selected>Glebe House, EX35 6NU</option>
+      <option value="views">Glen Doone, EX35 6NU</option>
+      <option value="comments">Lorna Doone Farm, EX35 6NU</option>
+    </select>
   </div>
-
+  
   <button class="govuk-button" data-module="govuk-button">
-    Search
+    Select
   </button>
 
 </fieldset>
