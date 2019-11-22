@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  What was impacted?
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        prototype
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a demo service created for the Flood Warning Expansion Hack
+      </span>
+    </p>
+  </div>
+  <a class="govuk-back-link" href="/inputdata">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-l">Lorna Doone Farm, EX35 6NU</span>
+
+
+      <h1 class="govuk-heading-xl">Would you like to share this impact information with the Flood Information Service?</h1>
+
+      <form class="form" action="/inputdata_timing" method="post">
+
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
