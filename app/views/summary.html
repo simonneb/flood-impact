@@ -1,0 +1,138 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Your summary
+{% endblock %}
+
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        prototype
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a demo service created for the Flood Warning Expansion Hack
+      </span>
+    </p>
+  </div>
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">
+        Your summary
+      </h1>
+
+      <ol class="app-task-list">
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">1. </span> Location information
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="eligibility-completed">
+                  Lorna Doone Farm, EX35 6NU
+                </a>
+              </span>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">2. </span> Impacts observed
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="company-information-completed">
+                  Internal property flooding
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="company-information-completed">Yes</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="contact-details-completed">
+                  Time and date observed
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="contact-details-completed">22 November 2019 at 15:00</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#">
+                  Probable source
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="contact-details-completed">River Tor</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="medical-information-completed">
+                  Estimated river level at time of flooding
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="medical-information-completed">1.9m</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#">
+                  Submit for inclusion in Flood Information Service?
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="contact-details-completed">Yes</strong>
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="medical-information-completed">
+                  Did you receive a flood warning?
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="medical-information-completed">Yes</strong>
+            </li>
+
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="medical-information-completed">
+                  Was the warning useful?
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="medical-information-completed">No</strong>
+            </li>
+            
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">3. </span> Your contact details
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#">
+                  Phone number
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="medical-information-completed">07866876542</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+                <a href="#" aria-describedby="medical-information-completed">
+                  Email address
+                </a>
+              </span>
+              <strong class="govuk-tag app-task-list__task-completed" id="medical-information-completed">john@smith.com</strong>
+            </li>
+          </ul>
+        </li>
+      </ol>
+
+    </div>
+  </div>
+
+{% endblock %}
