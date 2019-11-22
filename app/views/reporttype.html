@@ -20,34 +20,43 @@
 
 {% block content %}
 
+<form class="form" action="/locationsearch" method="post">
+
 <div class="govuk-form-group">
-  <fieldset class="govuk-fieldset">
-    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-      <h1 class="govuk-fieldset__heading">
-        Are you creating a new report or updating an existing report?
-      </h1>
-    </legend>
+    <fieldset class="govuk-fieldset" aria-describedby="sign-in-hint">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+        <h1 class="govuk-fieldset__heading">
+            Are you creating a new report or updating an existing report?
+        </h1>
+      </legend>
+      <span id="sign-in-hint" class="govuk-hint">
 
-    <form class="form" action="/locationsearch" method="post">
+      </span>
+      <div class="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sign-in" name="sign-in" type="radio" value="government-gateway" aria-describedby="sign-in-item-hint">
+          <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in">
+            Create a new report
+          </label>
+          <span id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
 
-    <div class="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
-          Create a new report
-        </label>
+          </span>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="sign-in-2" name="sign-in" type="radio" value="govuk-verify" aria-describedby="sign-in-2-item-hint">
+          <label class="govuk-label govuk-radios__label govuk-label--s" for="sign-in-2">
+            Update or view an existing report
+          </label>
+          <span id="sign-in-2-item-hint" class="govuk-hint govuk-radios__hint">
+            You’ll need your reference number that we emailed to you.
+          </span>
+        </div>
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
-        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
-          Update an existing report
-        </label>
-      </div>
-    </div>
-  </fieldset>
-</div>
+    </fieldset>
+  </div>
+
 <button class="govuk-button" data-module="govuk-button">
-  Save and continue
+  Continue
 </button>
 
 {% endblock %}
