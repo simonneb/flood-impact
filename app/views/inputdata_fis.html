@@ -25,10 +25,35 @@
         <span class="govuk-caption-l">Lorna Doone Farm, EX35 6NU</span>
 
 
-      <h1 class="govuk-heading-xl">Would you like to share this impact information with the Flood Information Service?</h1>
+      <h1 class="govuk-heading-xl">Would you like to share this impact information?</h1>
 
       <form class="form" action="/inputdata_timing" method="post">
 
+        <div class="govuk-warning-text">
+            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+            <strong class="govuk-warning-text__text">
+              <span class="govuk-warning-text__assistive">Warning</span>
+              By selecting Yes, you give permission for the Environment Agency to use this impact information on the publically available Flood Information Service on GOV.UK           </strong>
+          </div>
+
+          <div class="govuk-form-group">
+              <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                <div class="govuk-checkboxes">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste">
+                      Yes
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                      No
+                    </label>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
 
         <button class="govuk-button" data-module="govuk-button">Continue</button>
 
