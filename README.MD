@@ -9,4 +9,4 @@ We ask local residents to provide feedback via an online form on observed impact
 This prototype provides an example of how local residents and communitys could feedback local impacts of flooding.
 
 ## Limitations
-This prototype is a demonstration only - and has limited funcitonality. Only key routes have been designed due to time constraints.
+This prototype is a demonstration only - and has limited functionality. Only key routes have been designed due to time constraints.
