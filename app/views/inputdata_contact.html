@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  What was impacted?
+  Your contact details?
 {% endblock %}
 
 {% block beforeContent %}
@@ -29,35 +29,33 @@
 
       <form class="form" action="/summary" method="post">
 
-        <div class="govuk-warning-text">
-            <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-            <strong class="govuk-warning-text__text">
-              <span class="govuk-warning-text__assistive">Warning</span>
-              By selecting Yes, you give permission for the Environment Agency to use this impact information on the publically available Flood Information Service on GOV.UK           </strong>
+
+      <div class="govuk-form-group">
+          <label class="govuk-label" for="email">
+            Email address
+          </label>
+          <span id="email-hint" class="govuk-hint">
+            We’ll only use this to send you a reference number, or get in touch with you about your report
+          </span>
+          <input class="govuk-input" id="email" name="email" type="email" aria-describedby="email-hint" autocomplete="email" spellcheck="false">
+        </div>
+
+        <div class="govuk-form-group">
+            <label class="govuk-label" for="telephone-number">
+              UK telephone number
+            </label>
+            <span id="email-hint" class="govuk-hint">
+                We’ll only use this to get in touch with you about your report
+              </span>   
+            <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel">
           </div>
 
-          <div class="govuk-form-group">
-              <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-                <div class="govuk-checkboxes">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste">
-                      Yes
-                    </label>
-                  </div>
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-                    <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                      No
-                    </label>
-                  </div>
-                </div>
-              </fieldset>
-            </div>
+          <form class="form" action="/summary" method="post">
 
-        <button class="govuk-button" data-module="govuk-button">Continue</button>
-
-      </form>
+            <button class="govuk-button" data-module="govuk-button">Continue</button>
+    
+          </form>
+    
 
     </div>
   </div>
