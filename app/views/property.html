@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block pageTitle %}
-  Blank page
+  Question page
 {% endblock %}
 
 {% block beforeContent %}
@@ -15,15 +15,27 @@
       </span>
     </p>
   </div>
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
 {% endblock %}
 
 {% block content %}
 
-<div class="govuk-form-group">
-  <label class="govuk-label" for="width-20">
-    Search for property
-  </label>
-  <input class="govuk-input" id="property" name="property" type="text">
-</div>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Search for your property</h1>
+
+      <form class="form" action="/url/of/next/page" method="post">
+
+        <p>[Insert question content here]</p>
+
+        <p>[See <a href="https://design-system.service.gov.uk">the GOV.UK Design System</a> for examples]</p>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
 
 {% endblock %}

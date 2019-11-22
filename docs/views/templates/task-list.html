@@ -4,6 +4,20 @@
   Task list
 {% endblock %}
 
+{% block beforeContent %}
+  <div class="govuk-phase-banner">
+    <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+        prototype
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a demo service created for the Flood Warning Expansion Hack
+      </span>
+    </p>
+  </div>
+  <a class="govuk-back-link" href="/url/of/previous/page">Back</a>
+{% endblock %}
+
 {% block content %}
 
   <div class="govuk-grid-row">
