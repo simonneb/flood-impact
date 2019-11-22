@@ -15,7 +15,7 @@
       </span>
     </p>
   </div>
-  <a class="govuk-back-link" href="/propertylist">Back</a>
+  <a class="govuk-back-link" href="/inputdata">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -25,7 +25,7 @@
 
       <h1 class="govuk-heading-xl">What was impacted?</h1>
 
-      <form class="form" action="/inputdata_source" method="post">
+      <form class="form" action="/summary" method="post">
 
         <h3 class="govuk-heading-m">Location selected</h3>
 
@@ -34,7 +34,7 @@
         <div class="govuk-form-group">
           <fieldset class="govuk-fieldset" aria-describedby="citizenship-conditional-hint">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
-              <h3 class="govuk-heading-m">Impacts observed</h3>
+              <h3 class="govuk-heading-m">Source of flooding</h3>
             </legend>
             <span id="citizenship-conditional-hint" class="govuk-hint">
               Select all options that are relevant to you.
@@ -43,23 +43,42 @@
               <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input" id="citizenship-conditional" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional">
                 <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
-                  Internal property flooding
+                  River
                 </label>
               </div>
               <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional">
                 <div class="govuk-form-group">
                   <label class="govuk-label" for="contact-by-email">
-                    To what depth (in metres)? - be as accurate as possible
+                    Which river? - be as accurate as possible
                   </label>
-                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="number" spellcheck="false">
+                  <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="text" spellcheck="false">
                 </div>
               </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-citizenship-conditional-2">
-                <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
-                  Access to property affected
-                </label>
+              
+                  <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                      <label class="govuk-label govuk-checkboxes__label" for="waste">
+                        Coast
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                        Groundwater
+                      </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                      <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                      <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+                        Surfacewater
+                      </label>
+                    </div>
+                  </div>
+                </fieldset>
               </div>
+
+
             </div>
           </fieldset>
         </div>
