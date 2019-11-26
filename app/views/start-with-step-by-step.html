@@ -19,23 +19,35 @@
   <div class="govuk-grid-column-two-thirds">
 
     <h1 class="govuk-heading-xl">
-      Check what age you can drive
+      {% if serviceName %} {{ serviceName }} {% endif %}
     </h1>
 
     <p>Use this service to:</p>
 
     <ul class="govuk-list govuk-list--bullet">
-      <li>do something</li>
-      <li>update your name, address or other details</li>
-      <li>do something else</li>
+      <li>tell us about flooding impacts in your area</li>
+      <li>help improve the local flood warnings in your area</li>
     </ul>
 
-    <a href="#" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8" data-module="govuk-button">
+    <p>Providing your information takes around 5 minutes.</p>
+
+    <a href="/reporttype" role="button" draggable="false" class="govuk-button govuk-button--start govuk-!-margin-top-2 govuk-!-margin-bottom-8"  data-module="govuk-button">
       Start now
       <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
         <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"></path>
       </svg>
     </a>
+
+    <h2 class="govuk-heading-m">Other ways to report impacts of flooding</h2>
+
+    <p>You can also call Floodline to report flood impacts.</p>
+
+    <div class="govuk-inset-text">
+      <p><strong>Floodline</strong><br>
+      Telephone: 0345 988 1188<br>
+      24-hour service<br>
+      <a href="https://www.gov.uk/call-charges">Find out about call charges</a></p>
+    </div>
 
   </div>
 
@@ -45,7 +57,7 @@
       <h2 class="app-step-nav-related__heading">
         <span class="app-step-nav-related__pretitle">Part of</span>
         <a href="#">
-          Learn to drive a car: step by step
+          Prepare for flooding: step by step
         </a>
       </h2>
     </div>
